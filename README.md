@@ -1,182 +1,208 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/Responsive-Mobile%20First-6366f1?style=for-the-badge" alt="Responsive"/>
-</p>
+# 🎓 LearnPro Academy - Landing Page CMS
 
-<h1 align="center">🎓 LearnPro Academy</h1>
-<h3 align="center">Premium Online Course Landing Page</h3>
+[![PHP](https://img.shields.io/badge/PHP-7.4+-777BB4?logo=php&logoColor=white)](https://php.net)
+[![MySQL](https://img.shields.io/badge/MySQL-5.7+-4479A1?logo=mysql&logoColor=white)](https://mysql.com)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-<p align="center">
-  <strong>Modern • Responsive • Mobile-First Design</strong>
-</p>
+ระบบ Landing Page CMS แบบครบวงจร พร้อม Admin Panel สำหรับจัดการเนื้อหา, ธีม, SEO และอื่นๆ ออกแบบมาให้ใช้งานง่าย ปลอดภัย และย้าย Domain ได้สะดวก
 
-<p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#-demo">Demo</a> •
-  <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-responsive-design">Responsive</a> •
-  <a href="#-installation">Installation</a>
-</p>
-
----
+![LearnPro Academy](https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=400&fit=crop)
 
 ## ✨ Features
 
-| Feature | Description |
-|---------|-------------|
-| 🌙 **Dark Theme** | Modern dark theme with gradient accents |
-| 📱 **Mobile-First** | Designed for mobile, enhanced for desktop |
-| 🎨 **Glassmorphism** | Trendy glass effect on navbar |
-| ⚡ **Smooth Animations** | Micro-interactions & scroll animations |
-| 🍔 **Hamburger Menu** | Collapsible navigation for mobile |
-| 📊 **Adaptive Layouts** | Different layouts per device |
+### 🎨 Frontend
+- **Responsive Design** - Mobile-first, รองรับทุกขนาดหน้าจอ
+- **Dark Theme** - ดีไซน์โมเดิร์น สีเข้ม สวยงาม
+- **Animations** - Smooth scroll, hover effects, floating cards
+- **OpenStreetMap** - แผนที่ฟรี ไม่ต้องใช้ API Key
+- **Google Maps** - รองรับ Google Maps API (optional)
 
----
+### 🔐 Admin Panel
+- **Secure Login** - Password hashing (BCRYPT)
+- **Custom CAPTCHA** - ป้องกัน bot
+- **Dashboard** - ภาพรวมข้อมูลเว็บไซต์
+- **Settings Management** - จัดการตั้งค่าทุกส่วน
 
-## 🎯 Demo
+### 📝 Content Management
+- **General Settings** - ชื่อเว็บ, โลโก้, คำอธิบาย
+- **Hero Section** - หัวข้อ, ปุ่ม, รูปภาพ, สถิติ
+- **Courses** - เพิ่ม/แก้ไข/ลบ คอร์สเรียน
+- **Pricing** - แพ็กเกจราคา พร้อม Features
+- **Contact** - ข้อมูลติดต่อ, พิกัดแผนที่
+- **Footer** - ข้อความ Copyright, Social Links
 
-### Desktop View (1400px+)
-- Hero section with instructor image & floating cards
-- 3-column curriculum grid with hover effects
-- Comparison table for pricing
+### 🎨 Theme Customization
+- **5 Theme Presets** - Dark Purple, Dark Blue, Dark Green, Light Modern, Light Warm
+- **Custom Colors** - ปรับสีได้เอง (Primary, Secondary, Accent, Background)
+- **Font Selection** - เลือกฟอนต์ไทยได้หลายแบบ
 
-### Tablet View (768px - 1024px)
-- Optimized grid layouts
-- Touch-friendly interactions
-- Landscape & portrait support
+### 🔍 SEO & Schema.org
+- **Meta Tags** - Title, Description, Keywords, Author, Robots
+- **Open Graph** - Facebook sharing optimization
+- **Twitter Cards** - Twitter sharing optimization
+- **Schema.org JSON-LD** - Structured data สำหรับ Search Engines & AI
+- **Canonical URL** - ป้องกัน duplicate content
+- **Favicon** - รองรับ favicon
 
-### Mobile View (< 768px)
-- Single column layout
-- Accordion for curriculum
-- Card-based pricing
-- Thumb-zone optimized buttons
+### 🛡️ Security
+- **CSRF Protection** - ป้องกัน Cross-Site Request Forgery
+- **Rate Limiting** - ป้องกัน brute force
+- **Input Sanitization** - ป้องกัน XSS
+- **Secure Sessions** - Session security headers
+- **Password Hashing** - BCRYPT algorithm
+- **File Upload Validation** - ตรวจสอบไฟล์อัพโหลด
 
----
+## 📋 Requirements
 
-## 🛠 Tech Stack
+- PHP 7.4+ (รองรับ PHP 8.x)
+- MySQL 5.7+ / MariaDB 10.3+
+- Apache / Nginx (mod_rewrite enabled)
+- GD Library (สำหรับ CAPTCHA)
 
+## 🚀 Installation
+
+### 1. Clone Repository
+```bash
+git clone <your-repository-url>
+cd landingap
 ```
-Frontend
-├── HTML5          → Semantic markup & SEO optimized
-├── CSS3           → Custom properties, Grid, Flexbox
-│   ├── Mobile-First approach
-│   ├── CSS Custom Properties (Variables)
-│   ├── CSS Grid & Flexbox
-│   └── Keyframe Animations
-└── JavaScript ES6+
-    ├── IntersectionObserver API
-    ├── Event Delegation
-    └── DOM Manipulation
+
+### 2. สร้าง Database
+```bash
+# สร้าง Database
+mysql -u root -p -e "CREATE DATABASE landingap_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
+
+# Import Schema
+mysql -u root -p --default-character-set=utf8mb4 landingap_db < sql/database.sql
+mysql -u root -p --default-character-set=utf8mb4 landingap_db < sql/seo_themes.sql
 ```
 
----
+### 3. ตั้งค่า Config
+แก้ไขไฟล์ `config/database.php`:
+```php
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'landingap_db');
+define('DB_USER', 'root');
+define('DB_PASS', 'your_password');
+```
 
-## 📐 Responsive Design
+แก้ไขไฟล์ `config/config.php`:
+```php
+define('SITE_URL', 'https://yourdomain.com');
+```
 
-### Breakpoints
+### 4. ตั้งค่า Permissions (Linux/Mac)
+```bash
+chmod 755 uploads/
+chmod 755 logs/
+```
 
-| Device | Width | Layout Strategy |
-|--------|-------|-----------------|
-| 📱 Mobile | < 768px | Single column, Accordion, Cards |
-| 📱 Tablet | 768px - 1024px | Multi-column Grid, Table |
-| 🖥 Desktop | > 1024px | Full layout, Hover effects |
+### 5. เข้าใช้งาน
+- **Frontend:** `https://yourdomain.com/index.php`
+- **Admin Panel:** `https://yourdomain.com/admin/login.php`
+- **Default Login:** `admin` / `password`
 
-### Component Behavior
-
-| Component | Mobile | Tablet/Desktop |
-|-----------|--------|----------------|
-| **Navigation** | Hamburger Menu | Horizontal Links |
-| **Hero Image** | Hidden | Visible + Floating Cards |
-| **Curriculum** | Accordion (tap to expand) | 3-Column Grid |
-| **Pricing** | Vertical Cards | Comparison Table |
-
----
-
-## 🧪 Test Scenarios
-
-### iPhone 14 (390 × 844)
-- [x] CTA button within thumb zone
-- [x] Hamburger menu accessible
-- [x] Cards stack vertically
-- [x] Fast loading, no horizontal scroll
-
-### iPad Air (820 × 1180)
-- [x] Grid doesn't break on rotation
-- [x] Table displays correctly
-- [x] Touch targets sized appropriately
-
-### Desktop Wide Screen (1400+)
-- [x] Hover effects on cards
-- [x] Floating card animations
-- [x] Navbar scroll effect
-- [x] Full comparison table
-
----
+⚠️ **อย่าลืมเปลี่ยนรหัสผ่านหลังติดตั้ง!**
 
 ## 📁 Project Structure
 
 ```
 landingap/
-├── 📄 index.html      # Main HTML structure
-├── 🎨 styles.css      # Mobile-first CSS
-├── ⚡ script.js       # JavaScript interactions
-└── 📖 README.md       # Documentation
+├── admin/                  # Admin Panel
+│   ├── assets/            # CSS สำหรับ Admin
+│   ├── includes/          # Sidebar, Header
+│   ├── login.php          # หน้า Login
+│   ├── dashboard.php      # Dashboard
+│   ├── settings.php       # ตั้งค่าทั่วไป (8 กลุ่ม)
+│   ├── courses.php        # จัดการคอร์ส
+│   ├── pricing.php        # จัดการแพ็กเกจ
+│   ├── themes.php         # จัดการธีม
+│   ├── seo.php            # ตั้งค่า SEO
+│   └── captcha.php        # สร้าง CAPTCHA
+├── assets/
+│   └── leaflet/           # Leaflet Map (local fallback)
+├── config/
+│   ├── config.php         # ตั้งค่าหลัก
+│   ├── database.php       # ตั้งค่า Database
+│   └── security.php       # Security functions
+├── docs/
+│   └── MANUAL.md          # คู่มือการใช้งาน
+├── sql/
+│   ├── database.sql       # Database schema
+│   └── seo_themes.sql     # SEO & Theme data
+├── uploads/               # ไฟล์อัพโหลด
+├── logs/                  # Security logs
+├── index.php              # หน้าแรก (Dynamic)
+├── index.html             # หน้าแรก (Static Demo)
+├── styles.css             # CSS หลัก
+├── script.js              # JavaScript หลัก
+└── README.md              # ไฟล์นี้
 ```
+
+## 🔧 Configuration
+
+### Map Provider
+ใน `config/config.php`:
+```php
+// OpenStreetMap (ฟรี - แนะนำ)
+define('MAP_PROVIDER', 'openstreetmap');
+
+// หรือ Google Maps (ต้องใส่ API Key)
+define('MAP_PROVIDER', 'google');
+define('GOOGLE_MAPS_API_KEY', 'your-api-key');
+```
+
+### CAPTCHA Provider
+```php
+// Custom CAPTCHA (Default)
+define('CAPTCHA_PROVIDER', 'custom');
+
+// หรือ Google reCAPTCHA v2
+define('CAPTCHA_PROVIDER', 'recaptcha');
+define('RECAPTCHA_SITE_KEY', 'your-site-key');
+define('RECAPTCHA_SECRET_KEY', 'your-secret-key');
+```
+
+## 🌐 Domain Migration
+
+ย้าย Domain ง่ายๆ เพียง:
+
+1. อัพโหลดไฟล์ทั้งหมดไปยัง Server ใหม่
+2. สร้าง Database และ Import SQL files
+3. แก้ไข `config/database.php` และ `config/config.php`
+4. เปลี่ยน `SITE_URL` เป็น Domain ใหม่
+
+## 📱 Screenshots
+
+### Frontend
+- Hero Section พร้อม Gradient Text
+- Curriculum แบบ Accordion (Mobile) / Grid (Desktop)
+- Pricing Table พร้อม Feature Comparison
+- Contact Section พร้อม OpenStreetMap
+
+### Admin Panel
+- Dashboard พร้อมสถิติ
+- Settings Manager (8 กลุ่ม)
+- Course & Pricing Management
+- Theme Customizer
+- SEO Settings
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 👨‍💻 Author
+
+Created with ❤️ for LearnPro Academy
 
 ---
 
-## 🚀 Installation
-
-### Option 1: Clone & Open
-```bash
-git clone https://github.com/pongsakfms-commits/landingap.git
-cd landingap
-# Open index.html in browser
-```
-
-### Option 2: Local Server (Recommended)
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js
-npx serve .
-
-# Using PHP (XAMPP)
-# Place in htdocs folder, access via localhost
-```
-
----
-
-## 🎨 Design System
-
-### Colors
-```css
---primary: #6366f1      /* Indigo */
---secondary: #0ea5e9    /* Sky Blue */
---accent: #f59e0b       /* Amber */
---bg-dark: #0f172a      /* Slate 900 */
---bg-card: #1e293b      /* Slate 800 */
-```
-
-### Typography
-- **Font**: Noto Sans Thai (Google Fonts)
-- **Weights**: 300, 400, 500, 600, 700
-
----
-
-## 📝 License
-
-MIT License - feel free to use for personal or commercial projects.
-
----
-
-<p align="center">
-  Made with ❤️ by <a href="https://github.com/pongsakfms-commits">pongsakfms-commits</a>
-</p>
-
-<p align="center">
-  <sub>⭐ Star this repo if you find it useful!</sub>
-</p>
+⭐ **Star this repo** if you found it useful!
