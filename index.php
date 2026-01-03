@@ -27,12 +27,78 @@ foreach ($packageFeatures as $pf) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="th">
+<html lang="<?= e(getSetting('seo_language', 'th')) ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<?= e(getSetting('site_description')) ?>">
-    <title><?= e(getSetting('site_name')) ?></title>
+    
+    <!-- SEO Meta Tags -->
+    <title><?= e(getSetting('seo_title', getSetting('site_name'))) ?></title>
+    <meta name="description" content="<?= e(getSetting('seo_description', getSetting('site_description'))) ?>">
+    <meta name="keywords" content="<?= e(getSetting('seo_keywords')) ?>">
+    <meta name="author" content="<?= e(getSetting('seo_author')) ?>">
+    <meta name="robots" content="<?= e(getSetting('seo_robots', 'index, follow')) ?>">
+    <?php if ($canonical = getSetting('seo_canonical')): ?>
+    <link rel="canonical" href="<?= e($canonical) ?>">
+    <?php endif; ?>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?= e(getSetting('seo_title', getSetting('site_name'))) ?>">
+    <meta property="og:description" content="<?= e(getSetting('seo_description', getSetting('site_description'))) ?>">
+    <meta property="og:url" content="<?= e(SITE_URL) ?>">
+    <?php if ($ogImage = getSetting('seo_og_image')): ?>
+    <meta property="og:image" content="<?= e($ogImage) ?>">
+    <?php endif; ?>
+    <meta property="og:locale" content="th_TH">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?= e(getSetting('seo_title', getSetting('site_name'))) ?>">
+    <meta name="twitter:description" content="<?= e(getSetting('seo_description')) ?>">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "<?= e(getSetting('schema_type', 'EducationalOrganization')) ?>",
+        "name": "<?= e(getSetting('schema_name', getSetting('site_name'))) ?>",
+        "description": "<?= e(getSetting('seo_description')) ?>",
+        "url": "<?= e(SITE_URL) ?>",
+        <?php if ($logo = getSetting('schema_logo', getSetting('site_logo'))): ?>
+        "logo": "<?= e($logo) ?>",
+        <?php endif; ?>
+        "telephone": "<?= e(getSetting('schema_phone', getSetting('contact_phone'))) ?>",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "<?= e(getSetting('contact_address')) ?>",
+            "addressCountry": "TH"
+        },
+        "priceRange": "<?= e(getSetting('schema_price_range', '฿฿')) ?>",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "<?= e(getSetting('schema_rating', '4.9')) ?>",
+            "reviewCount": "<?= e(getSetting('schema_review_count', '1000')) ?>"
+        },
+        "sameAs": [
+            <?php 
+            $socials = [];
+            if ($fb = getSetting('social_facebook')) $socials[] = '"' . e($fb) . '"';
+            if ($ig = getSetting('social_instagram')) $socials[] = '"' . e($ig) . '"';
+            if ($yt = getSetting('social_youtube')) $socials[] = '"' . e($yt) . '"';
+            if ($tw = getSetting('social_twitter')) $socials[] = '"' . e($tw) . '"';
+            if ($li = getSetting('social_linkedin')) $socials[] = '"' . e($li) . '"';
+            echo implode(",\n            ", $socials);
+            ?>
+        ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <?php if ($favicon = getSetting('favicon')): ?>
+    <link rel="icon" href="<?= e($favicon) ?>" type="image/x-icon">
+    <?php endif; ?>
+    
     <link href="https://fonts.googleapis.com/css2?family=<?= urlencode(getSetting('font_family', 'Noto Sans Thai')) ?>:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <?php if (MAP_PROVIDER === 'openstreetmap'): ?>
     <!-- Leaflet Map - CDN with local fallback -->
