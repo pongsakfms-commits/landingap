@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="คอร์สเรียนออนไลน์คุณภาพสูง เรียนได้ทุกที่ทุกเวลา พร้อมใบรับรอง">
+    <title>LearnPro Academy | คอร์สเรียนออนไลน์</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Learn<span>Pro</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero">หน้าแรก</a></li>
+                <li><a href="#curriculum">หลักสูตร</a></li>
+                <li><a href="#pricing">ราคา</a></li>
+                <li><a href="#" class="btn-nav">สมัครเรียน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>เปลี่ยนอนาคตของคุณ<br><span class="gradient-text">ด้วยทักษะใหม่</span></h1>
+                <p>เรียนรู้จากผู้เชี่ยวชาญระดับประเทศ พร้อมใบรับรองที่ได้รับการยอมรับ</p>
+                <div class="hero-buttons">
+                    <a href="#pricing" class="btn-primary">สมัครเรียนเลย</a>
+                    <a href="#curriculum" class="btn-secondary">ดูหลักสูตร</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><strong>10,000+</strong><span>นักเรียน</span></div>
+                    <div class="stat"><strong>50+</strong><span>คอร์ส</span></div>
+                    <div class="stat"><strong>98%</strong><span>พึงพอใจ</span></div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop" alt="ผู้สอน">
+                <div class="floating-card card-1">
+                    <span class="icon">🎓</span>
+                    <span>ใบรับรอง</span>
+                </div>
+                <div class="floating-card card-2">
+                    <span class="icon">⭐</span>
+                    <span>4.9 Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section class="curriculum" id="curriculum">
+        <div class="section-container">
+            <h2 class="section-title">หลักสูตรของเรา</h2>
+            <p class="section-subtitle">เลือกเรียนได้ตามความสนใจ</p>
+            
+            <!-- Mobile: Accordion -->
+            <div class="curriculum-accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>📱 พัฒนาแอปมือถือ</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Flutter Fundamentals - 12 ชั่วโมง</li>
+                            <li>React Native - 15 ชั่วโมง</li>
+                            <li>iOS Development - 20 ชั่วโมง</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>💻 Web Development</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>HTML/CSS/JavaScript - 10 ชั่วโมง</li>
+                            <li>React.js - 18 ชั่วโมง</li>
+                            <li>Node.js Backend - 16 ชั่วโมง</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>🎨 UX/UI Design</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Figma Mastery - 8 ชั่วโมง</li>
+                            <li>Design System - 10 ชั่วโมง</li>
+                            <li>Prototyping - 6 ชั่วโมง</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop: Grid -->
+            <div class="curriculum-grid">
+                <div class="course-card">
+                    <div class="course-icon">📱</div>
+                    <h3>พัฒนาแอปมือถือ</h3>
+                    <ul>
+                        <li>Flutter Fundamentals - 12 ชม.</li>
+                        <li>React Native - 15 ชม.</li>
+                        <li>iOS Development - 20 ชม.</li>
+                    </ul>
+                    <span class="course-badge">ยอดนิยม</span>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>HTML/CSS/JS - 10 ชม.</li>
+                        <li>React.js - 18 ชม.</li>
+                        <li>Node.js Backend - 16 ชม.</li>
+                    </ul>
+                    <span class="course-badge new">ใหม่</span>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">🎨</div>
+                    <h3>UX/UI Design</h3>
+                    <ul>
+                        <li>Figma Mastery - 8 ชม.</li>
+                        <li>Design System - 10 ชม.</li>
+                        <li>Prototyping - 6 ชม.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="section-container">
+            <h2 class="section-title">แพ็กเกจราคา</h2>
+            <p class="section-subtitle">เลือกแพ็กเกจที่เหมาะกับคุณ</p>
+
+            <!-- Mobile: Cards -->
+            <div class="pricing-cards">
+                <div class="price-card">
+                    <h3>Basic</h3>
+                    <div class="price">฿990<span>/เดือน</span></div>
+                    <ul>
+                        <li>✓ เข้าถึง 10 คอร์ส</li>
+                        <li>✓ ดูวิดีโอไม่จำกัด</li>
+                        <li>✗ ใบรับรอง</li>
+                        <li>✗ 1-on-1 Mentoring</li>
+                    </ul>
+                    <button class="btn-card">เลือกแพ็กเกจ</button>
+                </div>
+                <div class="price-card featured">
+                    <div class="badge">แนะนำ</div>
+                    <h3>Pro</h3>
+                    <div class="price">฿1,990<span>/เดือน</span></div>
+                    <ul>
+                        <li>✓ เข้าถึงทุกคอร์ส</li>
+                        <li>✓ ดูวิดีโอไม่จำกัด</li>
+                        <li>✓ ใบรับรอง</li>
+                        <li>✗ 1-on-1 Mentoring</li>
+                    </ul>
+                    <button class="btn-card primary">เลือกแพ็กเกจ</button>
+                </div>
+                <div class="price-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">฿4,990<span>/เดือน</span></div>
+                    <ul>
+                        <li>✓ เข้าถึงทุกคอร์ส</li>
+                        <li>✓ ดูวิดีโอไม่จำกัด</li>
+                        <li>✓ ใบรับรอง</li>
+                        <li>✓ 1-on-1 Mentoring</li>
+                    </ul>
+                    <button class="btn-card">เลือกแพ็กเกจ</button>
+                </div>
+            </div>
+
+            <!-- Desktop: Table -->
+            <div class="pricing-table-wrapper">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>Basic<br><small>฿990/เดือน</small></th>
+                            <th class="highlight">Pro<br><small>฿1,990/เดือน</small></th>
+                            <th>Enterprise<br><small>฿4,990/เดือน</small></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>เข้าถึงคอร์ส</td>
+                            <td>10 คอร์ส</td>
+                            <td class="highlight">ทุกคอร์ส</td>
+                            <td>ทุกคอร์ส</td>
+                        </tr>
+                        <tr>
+                            <td>ดูวิดีโอ</td>
+                            <td>✓</td>
+                            <td class="highlight">✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>ใบรับรอง</td>
+                            <td>✗</td>
+                            <td class="highlight">✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>1-on-1 Mentoring</td>
+                            <td>✗</td>
+                            <td class="highlight">✗</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button class="btn-table">เลือก</button></td>
+                            <td class="highlight"><button class="btn-table primary">เลือก</button></td>
+                            <td><button class="btn-table">เลือก</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2026 LearnPro Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
